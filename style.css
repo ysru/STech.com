@@ -1,0 +1,240 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+header{
+   
+    background-color:darkslategrey;
+    
+    
+}
+
+label.logo{
+    color: lime;
+    font-size: 35px;
+    line-height: 48px;
+    padding: 0 50px;
+    font-weight: bold;
+    font-family: montserrat;
+}
+nav ul {
+    float: right;
+    margin-right: 20px;
+   justify-content: flex-start;
+    align-items: center;
+}
+nav ul li {
+    display: inline-block;
+    line-height: 48px;
+    /*list-style: none;*/
+     margin: 0 20px;
+     
+}
+
+nav ul li a {
+    color: white;
+    font-size: 20px;
+    padding: 5px 5px;
+    border-radius: 5px;
+   text-decoration: none;
+   
+}
+.sidebar li a:hover {
+    background-color: #1b9bff;
+    transition: .5s;
+}
+.checkbtn{
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 48px;
+    margin-right: 24px;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+@media (max-width: 952px){
+    label.logo{
+        font-size: 30px;
+        padding-left: 50px;
+    }  
+    nav ul li a{
+        font-size: 16px;
+    }
+}
+@media (max-width: 858px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: #2c3e50;
+        top: 48px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    
+    nav ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+
+    }
+    nav ul li a{
+        font-size: 20px;
+    }
+    a.active,a:hover{
+        background: none;
+        color: #0082e6;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
+
+body{
+    background: linear-gradient(to top left, #f2ff3e, #fc0d0d);
+}
+
+.slider{
+    overflow: hidden;
+    left: 50%;
+    width: 60%;
+    margin: auto;
+    margin-top: 2px;
+   border: 2px solid black;
+}
+.slider figure{
+    width: 400%;
+    position: relative;
+    animation: animate 10s linear infinite;
+
+}
+@keyframes animate{
+    0%{
+        left: 0;
+    }
+    20%{
+        left: 0;
+    }
+    25%{
+        left: -100%;
+    }
+    45%{
+        left:-100%;
+    }
+    50%{
+        left:-200%;
+    }
+    70%{
+        left:-200%;
+    }
+    75%{
+        left:-300%;
+    }
+    95%{
+        left:-300%;
+    }
+    100%{
+        left: 0%;
+    }
+}
+.slider figure img{
+    width: 25%;
+    float: left;
+    aspect-ratio: auto 810 / 400;
+    height: 400px;
+}
+@media (max-width: 952px){
+    .slider{
+        overflow: hidden;
+        left: 50%;
+        width: 100%;
+        margin: auto;
+       /* margin-top: 2px;
+        border: 2px solid black;*/
+    }
+    .slider figure{
+        width: 400%;
+        position: relative;
+        animation: animate 10s linear infinite;
+    
+    }
+    
+}
+@media (max-width: 858px){
+    .slider{
+        left: 100%;
+        width: 100%;
+        /*margin: auto;*/
+       /* margin-top: 2px;*/
+        /*border: 2px solid black;*/
+    }
+    .slider figure img{
+        width: 25%;
+        float: left;
+        aspect-ratio: auto 810 / 400;
+        height: 200px;
+    }
+}
+.heading{
+    text-align: center;
+    padding-top: 15px;
+    /*background-color: yellowgreen;*/
+    color: black;
+    text-shadow: 0 5px 10px rgba(0,0,0,.2);
+    font-size: 60px;
+}
+.item{
+    width: 25%;
+    background-color: white;
+    display: inline-block;
+    border-radius: 5px;
+    margin: 45px;
+    box-shadow: 2px 2px 10px black;
+}
+
+.image img{
+    width: 100%;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+.title{
+    text-align: center;
+    padding: 5px;
+}
+.main_service .des {
+    text-align: center;
+    padding: 10px;
+    /* height: 160px; */
+    
+}
+.des a{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: inline-block;
+    background: white;
+    color: rgb(48, 28, 28);
+    border: 1px solid black;
+    /* color: #fff; */
+    font-size: 17px;
+    border-radius: 5px;
+    padding: 8px 25px;
+    text-decoration: none;
+}
+.des a:hover{
+    background-color: black ;
+    color: white;
+    transition: .5s;
+}
+
+
+
+
+
